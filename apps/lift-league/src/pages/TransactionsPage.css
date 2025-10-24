@@ -1,0 +1,48 @@
+.transactions-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.transactions-page h1 {
+  margin-bottom: var(--spacing-xl);
+}
+
+.transactions-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.transactions-info {
+  background: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+}
+
+.transactions-info h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.status-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.status-item {
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.status-item p {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin: 0;
+}

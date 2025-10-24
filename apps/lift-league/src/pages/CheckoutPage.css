@@ -1,0 +1,114 @@
+.checkout-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.checkout-page h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.plan-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.plan-button {
+  background: var(--color-surface);
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.plan-button:hover {
+  border-color: var(--color-primary);
+}
+
+.plan-button.active {
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+}
+
+.plan-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.plan-savings {
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-success);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.plan-details {
+  background: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.plan-details h2 {
+  color: var(--color-primary);
+}
+
+.plan-details ul {
+  list-style: none;
+}
+
+.plan-details li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.plan-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.payment-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.checkout-info {
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.security-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.cancel-note {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 600px) {
+  .plan-selection {
+    grid-template-columns: 1fr;
+  }
+}

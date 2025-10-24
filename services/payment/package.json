@@ -1,0 +1,23 @@
+{
+  "name": "@services/payment",
+  "version": "0.1.0",
+  "description": "Cloneable Payment Service with ledger system and payment processing",
+  "main": "./core/index.ts",
+  "types": "./core/index.ts",
+  "dependencies": {
+    "@shared/types": "*",
+    "@shared/config": "*"
+  },
+  "exports": {
+    ".": "./core/index.ts",
+    "./types": "./core/types.ts",
+    "./api": "./api/index.ts",
+    "./ui": "./ui/index.ts"
+  },
+  "keywords": [
+    "payment",
+    "ledger",
+    "transactions",
+    "cloneable-service"
+  ]
+}

@@ -1,0 +1,377 @@
+/**
+ * Payment Service UI Styles
+ * Base styles for payment components
+ * Can be customized per application
+ */
+
+/* Payment Component */
+.payment-component {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-title {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.payment-input,
+.payment-select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+.payment-input:focus,
+.payment-select:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.payment-input:disabled,
+.payment-select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.payment-amount-display {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding: 12px 0;
+}
+
+.payment-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.payment-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.payment-error {
+  padding: 12px;
+  background: #fee;
+  color: #c00;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.payment-button {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.payment-button-primary {
+  background: #0066cc;
+  color: #ffffff;
+}
+
+.payment-button-primary:hover:not(:disabled) {
+  background: #0052a3;
+}
+
+.payment-button-secondary {
+  background: #e0e0e0;
+  color: #1a1a1a;
+}
+
+.payment-button-secondary:hover:not(:disabled) {
+  background: #d0d0d0;
+}
+
+/* Payment History */
+.payment-history {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.payment-history-title {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.payment-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-history-item {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-history-item:hover {
+  border-color: #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+}
+
+.transaction-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.transaction-description {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.transaction-date {
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.transaction-amount {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.transaction-amount-sent {
+  color: #c00;
+}
+
+.transaction-amount-received {
+  color: #0a0;
+}
+
+.transaction-status {
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-processing {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-refunded {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.status-cancelled {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.transaction-meta {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.payment-history-loading,
+.payment-history-error,
+.payment-history-empty {
+  padding: 40px;
+  text-align: center;
+  color: #6a6a6a;
+}
+
+.payment-history-error {
+  color: #c00;
+}
+
+/* Balance Display */
+.balance-display {
+  max-width: 400px;
+  padding: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.balance-main {
+  margin-bottom: 20px;
+}
+
+.balance-label {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.balance-amount {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.balance-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.balance-detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.balance-detail-label {
+  opacity: 0.9;
+}
+
+.balance-detail-value {
+  font-weight: 600;
+}
+
+.balance-account-id {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.balance-refresh-button {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.balance-refresh-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.balance-refresh-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.balance-loading,
+.balance-error {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .payment-component,
+  .payment-history,
+  .balance-display {
+    padding: 16px;
+  }
+
+  .payment-actions {
+    flex-direction: column;
+  }
+
+  .payment-button {
+    width: 100%;
+  }
+
+  .transaction-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-details {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
